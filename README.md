@@ -1,12 +1,15 @@
 # Elm-Euterpia project
 
-This project has three aims.  (1) Implement the fun but totally
-useless [Techno Drum App](https://jxxcarlson.github.io/app/drumlanguage.html) (see `./app`).
-(2) Implement as much of
+This project has three aims.  
+
+:one: Implement the fun but totally useless [Techno Drum App](https://jxxcarlson.github.io/app/drumlanguage.html) (see `./app`).
+
+:two: Implement as much of
 the basic functionality of *Euterpia*, the music composition system created by
 Paul Hudak (see *The Haskell School of Music*).  As the name indicates,
 the system is written in Haskell, and one uses it to write music directly.
-(3) implement a player interface for elm-euterpia (as we might call it) to
+
+:three: implement a player interface for elm-euterpia (as we might call it) to
 a javascript music player system.  It seems that `Tone.js` is a good candidate.
 MIDI should also be added (in and out).
 
@@ -41,7 +44,7 @@ type Music a
     = Prim (Primitive a)
     | Sequence (List (Music a))
     | Stack (List (Music a))
-    | odify Control (Music a)
+    | Modify Control (Music a)
 ```
 
 Compare this type definition to Hudack's,
